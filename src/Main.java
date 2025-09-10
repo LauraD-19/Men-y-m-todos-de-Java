@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner teclado=new Scanner(System.in);
         System.out.println(
-                "Bienvenido, escoge una opción: \n" +
+                "≧◉ᴥ◉≦ Bienvenido, escoge una opción: \n" +
                         "1. Método con retorno \n" +
                         "2. Método sin retorno \n" +
                         "3. Método estatico \n" +
@@ -16,7 +16,8 @@ public class Main {
                         "7. Método con parámetros \n" +
                         "8. Método getter y setter \n" +
                         "9. Método sobrecargado \n" +
-                        "10. Método anulado ");
+                        "10. Método anulado \n" +
+                        "11. Método constructor");
         int op= teclado.nextInt();
         switch (op){
             case 1:
@@ -43,7 +44,7 @@ public class Main {
                 Axel.ladrar();
                 break;
             case 5:
-                //metodo abstracto1
+                //metodo abstracto
 
                 Animal mascota = new bubu();
                 mascota.habla();
@@ -96,9 +97,15 @@ public class Main {
                 Beast mypet = new Bt();
                 mypet.talk();
                 break;
+            case 11:
+                System.out.println("Método constructor");
+                carro Carro = new carro();
+                System.out.println("Modelo: " + carro.modelo + " , año: " + carro.año);
+                break;
             default:
 
-                System.out.println("opción invalida, intentelo de nuevo más tarde");
+                System.out.println("(ㆆ_ㆆ) \n" +
+                        "opción invalida");
                 break;
         }
     }
@@ -215,6 +222,15 @@ public class Main {
     static class Bt extends Beast{
         public void talk(){
             System.out.println("-Bay-");
+        }
+    }
+    //metodo constructor
+    public static class carro {
+        static String modelo;
+        static int año;
+        public carro(){
+            modelo = "Sports Car";
+            año = 2025;
         }
     }
 
